@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings Report – Interactive Deck</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    .email-tag {
+      font-size: 0.6em;
+      opacity: 0.8;
+    }
+    .kpi {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- TITLE SLIDE -->
+    <section>
+      <h2>Quarterly Earnings Report</h2>
+      <h4>Technical Overview &amp; Interactive Insights</h4>
+      <p>Prepared by: <strong>Soumyadeep Das</strong></p>
+      <p class="email-tag">
+        Contact:
+        <a href="mailto:50soumyadeepdas8a@gmail.com">50soumyadeepdas8a@gmail.com</a>
+      </p>
+
+      <aside class="notes">
+        Welcome the audience and introduce yourself as the technical consultant.
+        Mention that this deck combines financial results with modern, interactive
+        presentation features (code, math, and animations).
+      </aside>
+    </section>
+
+    <!-- MARKDOWN SLIDE (REQUIRED) -->
+    <section data-markdown>
+      <textarea data-template>
+## Agenda
+
+1. **Overview of Quarterly Performance**
+2. Revenue &amp; Profitability Trends
+3. Key Business Drivers
+4. Risk &amp; Compliance Highlights
+5. Technology &amp; Operational Metrics
+6. Q&amp;A
+
+*Use arrow keys or spacebar to navigate.*
+
+Note:
+- Briefly walk through the agenda.
+- Explain that you'll begin with the top-level view and then
+  move into drivers, risks, and technology aspects.
+      </textarea>
+    </section>
+
+    <!-- FRAGMENTS / ANIMATED ELEMENTS -->
+    <section>
+      <h3>Headline KPIs – Q<n></h3>
+      <p class="kpi fragment">Revenue Growth: <span>+12.4% YoY</span></p>
+      <p class="kpi fragment">Net Income: <span>₹ 1,230 Cr</span></p>
+      <p class="kpi fragment">Cost-to-Income Ratio: <span>48.7%</span></p>
+      <p class="kpi fragment">ROE: <span>15.3%</span></p>
+
+      <aside class="notes">
+        Reveal each KPI one at a time using fragments.
+        - For Revenue Growth, compare to the previous quarter.
+        - For Net Income, highlight any one-off items.
+        - For CTI and ROE, connect to operational efficiency and capital usage.
+      </aside>
+    </section>
+
+    <!-- CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
+    <section>
+      <h3>Data Pipeline for Earnings Dashboard</h3>
+      <pre><code class="language-js" data-trim data-line-numbers>
+/**
+ * Simplified ETL pipeline for the earnings dashboard
+ * (illustrative only, not production code)
+ */
+async function buildEarningsDataset(qtr) {
+  const revenue = await fetchKPI("revenue", qtr);
+  const opex    = await fetchKPI("operating_expenses", qtr);
+
+  const netIncome = revenue - opex;
+  const margin = netIncome / revenue;
+
+  return {
+    quarter: qtr,
+    revenue,
+    opex,
+    netIncome,
+    margin
+  };
+}
+      </code></pre>
+
+      <aside class="notes">
+        Explain how the dashboard is powered by an automated data pipeline.
+        Highlight:
+        - Separation of revenue and operating expenses.
+        - Derivation of net income and margin.
+        - Potential for extending this with risk checks and anomaly detection.
+      </aside>
+    </section>
+
+    <!-- MATH / FINANCIAL FORMULAS -->
+    <section>
+      <h3>Key Financial Formulas</h3>
+
+      <p class="fragment">
+        <strong>Return on Equity (ROE)</strong>:
+        \[
+          \text{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}}
+        \]
+      </p>
+
+      <p class="fragment">
+        <strong>Net Interest Margin (NIM)</strong>:
+        \[
+          \text{NIM} =
+          \frac{\text{Interest Income} - \text{Interest Expense}}
+               {\text{Average Earning Assets}}
+        \]
+      </p>
+
+      <p class="fragment">
+        <strong>Cost-to-Income Ratio (CTI)</strong>:
+        \[
+          \text{CTI} = \frac{\text{Operating Expenses}}{\text{Operating Income}}
+        \]
+      </p>
+
+      <aside class="notes">
+        Use the formulas to tie back to earlier KPIs.
+        - Show how improving income or controlling costs affects CTI and ROE.
+        - Emphasize that these ratios are closely watched by regulators and investors.
+      </aside>
+    </section>
+
+    <!-- RISK & CONTROL SLIDE WITH FRAGMENTS -->
+    <section>
+      <h3>Risk &amp; Control Perspective</h3>
+      <ul>
+        <li class="fragment">Automated reconciliation of P&amp;L and balance sheet extracts</li>
+        <li class="fragment">End-to-end data lineage from source systems to reporting layer</li>
+        <li class="fragment">Strict access control and four-eye review on manual adjustments</li>
+        <li class="fragment">Automated checks on outliers, breaks, and late data</li>
+      </ul>
+
+      <aside class="notes">
+        Map each control item to regulatory expectations.
+        Stress that earnings numbers are subject to robust checks before publication.
+      </aside>
+    </section>
+
+    <!-- WRAP-UP / CONTACT SLIDE (EMAIL REQUIREMENT) -->
+    <section>
+      <h3>Wrap-up &amp; Next Steps</h3>
+      <ul>
+        <li class="fragment">Quarter demonstrates solid, broad-based growth</li>
+        <li class="fragment">Risk and control posture remains strong</li>
+        <li class="fragment">Continued investment in data, automation, and analytics</li>
+      </ul>
+
+      <p class="fragment">
+        For follow-ups, contact:<br>
+        <strong>Soumyadeep Das</strong><br>
+        <span class="email-tag">
+          <a href="mailto:50soumyadeepdas8a@gmail.com">50soumyadeepdas8a@gmail.com</a>
+        </span>
+      </p>
+
+      <aside class="notes">
+        Reiterate the three key takeaways.
+        Invite questions and mention that deeper technical or financial
+        breakdowns can be shared in separate sessions if needed.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js core library -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+<!-- Plugins: Markdown, Highlight, Notes, Math -->
+<script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    controls: true,
+    progress: true,
+    center: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+  });
+</script>
+</body>
+</html>
